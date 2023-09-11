@@ -12,6 +12,99 @@
     font-size: 16px;
 }
 
+.icon{
+    width: 55px;
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: var(--transparent-white);
+}
+
+p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight:400;
+    text-align: start;
+    color: var(--transparent-white);
+}
+
+button{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight:400; 
+    font-size: 0.8rem;
+    background-color: white;
+    border-radius: 20px;
+    width: 125px;
+    height: 30px;
+}
+.sedan button{
+    color: var(--bright-orange);
+}
+
+.suv button{
+    color: var(--dark-cyan);
+}
+
+.luxury button{
+    color: var(--very-dark-cyan);
+}
+
+.sedan button:hover{
+    color: var(--transparent-white);
+    background-color: var(--bright-orange);
+    border:solid 2px var(--transparent-white);
+}
+.suv button:hover{
+    color:var(--transparent-white);
+    background-color: var(--dark-cyan);
+    border:solid 2px var(--transparent-white);
+}
+.luxury button:hover{
+    color:var(--transparent-white);
+    background-color: var(--very-dark-cyan);
+    border:solid 2px var(--transparent-white);
+}
+
+.container{
+    display: flex;
+    flex-flow: column wrap;
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media (min-width:1440px){
+.container{
+    display: grid;
+    grid-template-areas: 
+    "orange blue green"
+    "orange blue green"
+    "orange blue green"
+    "orange blue green";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 80vh;
+    padding: 25px;
+}
+}
+
+.sedan{
+    background-color: var(--bright-orange);
+    /* display: flex;
+    flex-flow: column wrap; */
+}
+
+.suv{
+    background-color: var(--dark-cyan);
+}
+
+.luxury{
+    background-color: var(--very-dark-cyan);
+}
+
+
+
 
 
 
