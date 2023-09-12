@@ -74,11 +74,12 @@ button{
     display: flex;
     flex-flow: column ;
     width: 90%;
+    margin-top: 40px;
 }
 
 .sedan{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     padding: 25px;
     width: 60%;
     margin: 0 auto;
@@ -88,7 +89,7 @@ button{
 
 .suv{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     padding: 25px;
     width: 60%;
     margin: 0 auto;
@@ -97,27 +98,12 @@ button{
 
 .luxury{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     padding: 25px;
     width: 60%;
     margin: 0 auto;
     gap: 20px;
     border-radius: 0px 0px 10px 10px;
-}
-
-@media (min-width:1440px){
-.container{
-    display: grid;
-    grid-template-areas: 
-    "orange blue green"
-    "orange blue green"
-    "orange blue green"
-    "orange blue green";
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    height: 80vh;
-    padding: 25px;
-}
 }
 
 .sedan{
@@ -132,7 +118,6 @@ button{
     background-color: var(--very-dark-cyan);
 }
 
-
 .attribution{
     font-size: 11px;
     text-align: center;
@@ -140,3 +125,52 @@ button{
 .attribution a{
     color: hsl(228, 45%, 44%);
 }
+
+@media (min-width:1440px){
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: grid;
+        grid-template-areas: 
+        "orange1 blue2 green3"
+        "orange1 blue2 green3"
+        "orange1 blue2 green3"
+        "orange1 blue2 green3";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        height: 400px;
+        padding: 25px;
+    }
+    
+    .sedan{
+        grid-area: orange1;
+        border-radius: 10px 0px 0px 10px;
+        position: relative;
+        left:122px;
+        text-align: justify;    
+    }
+    .sedan button{
+        margin-top: 70px;
+    }    
+    .suv{
+        grid-area: blue2;
+    }
+    .suv button{
+        margin-top: 52px;
+    }
+    
+    .luxury{
+        grid-area: green3;
+        border-radius: 0px 10px 10px 0px;
+        position: relative;
+        right: 122px;
+    }
+    .luxury button{
+        margin-top: 70px;
+    }
+    
+    .attribution{
+        display: none;
+    }
+    }
