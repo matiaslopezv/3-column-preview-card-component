@@ -9,6 +9,7 @@
 *{
     border: 0;
     padding: 0;
+    margin: 0;
     font-size: 16px;
 }
 
@@ -20,7 +21,8 @@ h1{
     text-transform: uppercase;
     font-family: 'Big Shoulders Display', cursive;
     font-weight: 700;
-    color: var(--transparent-white);
+    font-size: 1.6rem;
+    color: var(--very-light-gray);
 }
 
 p{
@@ -38,6 +40,7 @@ button{
     border-radius: 20px;
     width: 125px;
     height: 30px;
+    margin-top:35px
 }
 .sedan button{
     color: var(--bright-orange);
@@ -69,9 +72,37 @@ button{
 
 .container{
     display: flex;
+    flex-flow: column ;
+    width: 90%;
+}
+
+.sedan{
+    display: flex;
     flex-flow: column wrap;
-    width: 95%;
+    padding: 25px;
+    width: 60%;
     margin: 0 auto;
+    gap: 20px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.suv{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 25px;
+    width: 60%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.luxury{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 25px;
+    width: 60%;
+    margin: 0 auto;
+    gap: 20px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 @media (min-width:1440px){
@@ -91,8 +122,6 @@ button{
 
 .sedan{
     background-color: var(--bright-orange);
-    /* display: flex;
-    flex-flow: column wrap; */
 }
 
 .suv{
@@ -102,10 +131,6 @@ button{
 .luxury{
     background-color: var(--very-dark-cyan);
 }
-
-
-
-
 
 
 .attribution{
